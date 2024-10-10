@@ -1,0 +1,218 @@
+
+/* Reset CSS */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	/*margin: 0;
+	padding: 0;*/
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+p, li {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+/* Center the header logo */
+header.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
+    height: 150px;           /* Adjust the height of the header if needed */
+}
+
+.logo {
+    max-width: 100%;         /* Ensure the logo scales within its container */
+    height: auto;            /* Maintain aspect ratio */
+}
+
+
+/* Basic styles for layout */
+
+.container {
+	max-width: 1440px;
+	margin-inline:auto;
+	padding-inline: 5%; 
+}
+
+/* Center the image and make it responsive */
+section.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    padding: 20px;           /* Optional padding */
+}
+
+section.container aside img {
+    max-width: 100%;         /* Ensure the image scales within its container */
+    height: auto;            /* Maintain aspect ratio */
+}
+
+
+#selected-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: none; /* Initially hide the image */
+}
+
+#image-input {
+    margin: 20px 0;
+}
+
+#error-message {
+    color: red;
+    display: none;
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 20px;
+}
+
+#whatsapp-btn {
+    display: none; /* Initially hidden */
+    text-decoration: none;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#whatsapp-btn:hover {
+    background-color: #20b954;
+}
+
+
+#contenu-oeuvre {
+    max-width: 470px;
+}
+
+#contact {
+	margin-bottom: 0;
+}
+#contact article, #contact div {
+	flex:1;
+}
+
+#contact .container {
+	flex-direction: row;
+	display: flex;
+	padding: 6em ;
+}
+
+#contact .container > div > div {
+	display: flex;
+	padding-bottom: 20px;
+}
+
+#contact h3 {
+	margin-top: 0;
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	padding-left:1.5em;
+	width: 200px;
+}
+
+#about-us {
+	display: flex;
+}
+#about-us article, #about-us aside {
+	flex:1;
+}
+#about-us li {
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	font-size: 16px;
+	line-height: 26px;
+	padding-left:2em;
+	width: 81%; /*81%   was  65%*/  
+	margin-bottom: 1em;
+}
+.slide-selector {
+
+	text-align: center;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 30px;
+	margin-block: 1em;
+}
+
+footer {
+	background-color: #28363D;
+	color: white;
+	display: flex;
+	padding-block: 3em;
+	justify-content: space-evenly;
+	font-size: 12px;
+	align-items: center;
+}
+footer div {
+
+	position: relative;
+}
+.footer-logo {
+	background-color: white;
+	max-width: 308px;
+	padding: 10px;
+}
+.footer-contact {
+	margin-bottom: 1em;
+	font-weight: 700;
+	font-size: 16px;
+
+}
+
+@media all and (max-width: 1250px) {
+	#contact > article {
+		flex: 2;
+	}
+}
+
+@media (max-width: 850px) {
+    .oeuvre {
+        width: 50%;
+    }
+
+    #img-oeuvre {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #img-oeuvre img {
+        width: 100%;
+    }
+
+    #contenu-oeuvre {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .oeuvre {
+        width: 100%;
+    }
+
+    #logo {
+        width: 200px;
+    }
+}

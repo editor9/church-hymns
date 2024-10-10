@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>كنيسة الاشرفية ترانيم مسيحية</title>
+</head>
+<body>
+
+    <header class="container">
+        <h1>
+            <img class="logo" src="img/logo.png" alt="كنيسة الاشرفية ترانيم مسيحية">
+        </h1>
+    </header>
+
+    <main>
+        <!-- Dropdown to choose between Book 1 and Book 2 -->
+        <div class="slide-selector">
+            <label for="book-select">Choose a book:</label>
+            <select class="slide-selector" id="book-select">
+                <option value="1" selected>Book 1</option>
+                <option value="2">Book 2</option>
+            </select>
+        </div>
+
+        <!-- Dropdown for category selection -->
+        <div class="slide-selector" id="category-container">
+            <label for="category-select">Categories</label>
+            <select class="slide-selector" id="category-select">
+                <!-- Categories will be populated dynamically -->
+            </select>
+        </div>
+
+        <!-- Input field to select an image -->
+        <div class="slide-selector">
+            <label for="image-input">إختار رقم الترنيمة</label>
+            <input class="slide-selector" type="number" id="image-input" min="1" max="315" value="1" placeholder="1-15">
+        </div>
+
+        <!-- Error message for invalid input -->
+        <p id="error-message">Please enter a valid number between 1 and 315.</p>
+
+        <!-- Container where the selected image will appear -->
+        <div>
+            <img id="selected-image" src="" alt="Selected Artwork">
+        </div>
+
+        <!-- Additional image that needs to be centered -->
+        <section class="container">
+            <aside>
+                <img id="centered-image" src="img/colors.jpg" alt="Color palette">
+            </aside>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <p class="footer-contact">Contact</p>
+            <ul>
+                <li>Tel +961 3 926 042</li>
+                <li>Lun-Ven : 9h30-17h30</li>
+                <li>Sam : 10h-13h et 14h-17h30</li>
+            </ul>
+        </div>
+        <div>
+            <p>Numero de rue .... ,Nom de rue <br> Achrafieh</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script.js -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
