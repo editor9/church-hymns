@@ -26,8 +26,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 p, li {
-	font-family: Roboto, sans-serif;
-	font-size: 16px;
+
 	line-height: 26px;
 }
 
@@ -160,24 +159,14 @@ footer {
 	background-color: #28363D;
 	color: white;
 	display: flex;
-	padding-block: 3em;
-	justify-content: space-evenly;
-	font-size: 12px;
-	align-items: center;
-}
-footer div {
 
-	position: relative;
+	justify-content: space-evenly;
+	
+
 }
-.footer-logo {
-	background-color: white;
-	max-width: 308px;
-	padding: 10px;
-}
+
 .footer-contact {
-	margin-bottom: 1em;
-	font-weight: 700;
-	font-size: 16px;
+padding: 20px;
 
 }
 
