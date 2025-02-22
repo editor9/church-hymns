@@ -148,6 +148,11 @@ section.container aside img {
 	font-size: 30px;
 	margin-block: 1em;
 }
+
+input [type="number"] {
+	width: 150px;
+}
+
 footer {
 	background-color: #28363D;
 	color: white;
