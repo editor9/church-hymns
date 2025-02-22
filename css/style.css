@@ -26,7 +26,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 p, li {
-
 	line-height: 26px;
 }
 
@@ -42,7 +41,6 @@ header.container {
     max-width: 100%;         /* Ensure the logo scales within its container */
     height: auto;            /* Maintain aspect ratio */
 }
-
 
 /* Basic styles for layout */
 
@@ -64,7 +62,6 @@ section.container aside img {
     max-width: 100%;         /* Ensure the image scales within its container */
     height: auto;            /* Maintain aspect ratio */
 }
-
 
 #selected-image {
     margin-top: 20px;
@@ -103,7 +100,6 @@ section.container aside img {
     background-color: #20b954;
 }
 
-
 #contenu-oeuvre {
     max-width: 470px;
 }
@@ -132,7 +128,6 @@ section.container aside img {
 	padding-left:1.5em;
 	width: 200px;
 }
-
 #about-us {
 	display: flex;
 }
@@ -152,21 +147,17 @@ section.container aside img {
 	font-family: 'Roboto Slab', sans-serif;
 	font-size: 30px;
 	margin-block: 1em;
-	border: none; /* Remove default border */
+	/* border: none;  Remove default border */
     	outline: none; /* Remove focus outline */
-    	width: auto; /* Let width adapt */
+    	/* width: auto;  Let width adapt */
 }
-
 footer {
 	background-color: #28363D;
 	color: white;
 	display: flex;
 
 	justify-content: space-evenly;
-	
-
 }
-
 
 
 @media all and (max-width: 1250px) {
