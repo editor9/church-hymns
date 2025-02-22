@@ -147,7 +147,7 @@ section.container aside img {
 	font-family: 'Roboto Slab', sans-serif;
 	font-size: 30px;
 	margin-block: 1em;
-	/* border: none;  Remove default border */
+	 border: none; /* Remove default border */
     	outline: none; /* Remove focus outline */
     	/* width: auto;  Let width adapt */
 }
