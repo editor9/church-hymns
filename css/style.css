@@ -147,6 +147,7 @@ section.container aside img {
 	font-family: 'Roboto Slab', sans-serif;
 	font-size: 30px;
 	margin-block: 1em;
+	border: none;
 }
 
 input [type="number"] {
