@@ -152,6 +152,7 @@ section.container aside img {
 
 .innum {
 	width: 120px;
+	border: dotted;
 }
 
 footer {
