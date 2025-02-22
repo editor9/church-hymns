@@ -150,7 +150,7 @@ section.container aside img {
 	border: none;
 }
 
-input [type="number"] {
+.innum {
 	width: 350px;
 }
 
