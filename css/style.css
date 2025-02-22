@@ -148,8 +148,8 @@ section.container aside img {
 	font-size: 30px;
 	margin-block: 1em;
 	/* border: none;  Remove default border */
-    	outline: auto; /* Remove focus outline */
-    	/* width: auto;  Let width adapt */
+    	/* outline: auto;  Remove focus outline */
+    	 width: auto; /* Let width adapt */
 }
 footer {
 	background-color: #28363D;
