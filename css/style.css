@@ -87,21 +87,20 @@ section.container aside img {
 }
 
 #search-input {
-    width: 52%;
+    width: 50%;
     font-family: 'Roboto Slab', sans-serif;
-    padding: 10px;
-    font-size: 21px;
+    font-size: 24px;
     border: dotted;
 }
 
 #search-results {
     width: 60%;
-    padding: 10px;
-    font-size: 21px;
+    font-size: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 10px;
 }
+
 
 
 #whatsapp-btn {
