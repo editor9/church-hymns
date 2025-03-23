@@ -18,7 +18,7 @@
     <main>
         <!-- Dropdown to choose between Book 1 and Book 2 -->
         <div class="slide-selector">
-            <label for="book-select">إختيار الكتاب</label>
+            <label for="book-select">اختر الكتاب</label>
             <select class="slide-selector" id="book-select">
                 <option value="1" selected>الكتاب الأول</option>
                 <option value="2">الكتاب الثاني</option>
@@ -26,21 +26,32 @@
         </div>
 
         <!-- Dropdown for category selection -->
-        <div class="slide-selector" id="category-container">
-            <label for="category-select">دليل المواضيع</label>
+    
+        <div class="slide-selector" id="category-container"> 
+           <label for="category-select">دليل المواضيع</label> 
             <select class="slide-selector" id="category-select">
+    
                 <!-- Categories will be populated dynamically -->
+                 
+            </select>
+        </div>
+    
+        <div class="slide-selector">
+            <label for="search-input">بحث بالكلمات</label>
+            <input type="text" id="search-input" placeholder="أدخل عنوان او قرار">
+            <select id="search-results">
+                <option value="">اختر ترنيمة...</option>
             </select>
         </div>
 
         <!-- Input field to select an image -->
         <div class="slide-selector">
-            <label for="image-input">إختار رقم الترنيمة</label>
+            <label for="image-input">ادخل رقم الترنيمة</label>
             <input class="slide-selector innum" type="number" id="image-input" min="1" max="315" value="1" placeholder="1-315">
         </div>
 
         <!-- Error message for invalid input -->
-        <p id="error-message">Please enter a valid number between 1 and 315.</p>
+        <p id="error-message">Please enter a valid number</p>
 
         <!-- Container where the selected image will appear -->
         <div>
