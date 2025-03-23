@@ -86,6 +86,24 @@ section.container aside img {
     margin-bottom: 20px;
 }
 
+#search-input {
+    width: 42%;
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 10px;
+    font-size: 21px;
+    border: dotted;
+}
+
+#search-results {
+    width: 60%;
+    padding: 10px;
+    font-size: 21px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
 #whatsapp-btn {
     display: none; /* Initially hidden */
     text-decoration: none;
