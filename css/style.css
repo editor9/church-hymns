@@ -79,6 +79,12 @@ section.container aside img {
     display: none;
 }
 
+#category-select,
+label[for="category-select"] {
+    display: none;
+}
+
+
 #input-container {
     display: flex;
     align-items: center;
