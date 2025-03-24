@@ -5,9 +5,14 @@ const searchResults = document.getElementById('search-results');
 const imageInput = document.getElementById('image-input');
 const imgElement = document.getElementById('selected-image');
 const errorMessage = document.getElementById('error-message');
-const categorySelect = document.getElementById('category-select');
 
 let currentBook = 'img1'; // Default book folder
+
+// Maximum hymn numbers for each book
+const maxValues = {
+    '1': 315,
+    '2': 143
+};
 
 // List of hymns for each book
 const hymns = {
@@ -456,63 +461,31 @@ const hymns = {
     ]
 };
 
-// Categories for each book
-const categories = {
-    '1': [
-        { value: 1, text: 'التسبيح والعبادة (56 - 1)' },
-        { value: 2, text: 'الفداء (105 - 57)' },
-        { value: 3, text: 'القيامة (114 - 106)' },
-        { value: 4, text: 'السماء والمجيء الثاني (150 - 115)' },
-        { value: 5, text: 'البنيان (256 - 151)' },
-        { value: 6, text: 'الخلاص (293 - 257)' },
-        { value: 7, text: 'الزواج (300 - 294)' },
-        { value: 8, text: 'دليل الترانيم (315 - 301)' }
-    ],
-    '2': [
-        { value: 1, text: 'التسبيح والعبادة (16 - 1)' },
-        { value: 2, text: 'الفداء (44 - 17)' },
-        { value: 3, text: 'القيامة (47 - 45)' },
-        { value: 4, text: 'السماء والمجيء الثاني (57 - 48)' },
-        { value: 5, text: 'البنيان (122 - 58)' },
-        { value: 6, text: 'الخلاص (139 - 123)' },
-        { value: 8, text: 'دليل الترانيم (143 - 140)' }
-    ]
-};
-
-// Maximum hymn numbers for each book
-const maxValues = {
-    '1': 315,
-    '2': 143
-};
 
 // Update the image based on input
 function updateImage() {
-    const value = parseInt(imageInput.value);
     const selectedBook = bookSelect.value;
     const maxValue = maxValues[selectedBook];
+    let value = parseInt(imageInput.value);
 
-    if (value >= 1 && value <= maxValue) {
+    if (!isNaN(value) && value >= 1 && value <= maxValue) {
         imgElement.src = `img${selectedBook}/${value}.jpg`;
         imgElement.style.display = 'block';
-        errorMessage.style.display = 'none'; // Hide error
     } else {
         imgElement.style.display = 'none';
-        errorMessage.style.display = 'block'; // Show error
     }
 }
 
-// Handle number input
+// Ensure input is within range and reset if invalid
 imageInput.addEventListener('input', function () {
-    const value = parseInt(imageInput.value);
     const selectedBook = bookSelect.value;
     const maxValue = maxValues[selectedBook];
+    let value = parseInt(imageInput.value);
 
     if (isNaN(value) || value < 1 || value > maxValue) {
-        errorMessage.style.display = 'block';
-        imgElement.style.display = 'none';
+        imageInput.value = ''; // Reset input only if invalid
     } else {
-        errorMessage.style.display = 'none';
-        updateImage();
+        updateImage(); // Update image if valid input
     }
 });
 
@@ -538,7 +511,7 @@ searchInput.addEventListener('input', function () {
 searchResults.addEventListener('change', function () {
     if (searchResults.value) {
         imageInput.value = searchResults.value;
-        searchInput.value = ''; // Clear the search input field
+        searchInput.value = ''; // Clear search field
         updateImage();
     }
 });
@@ -546,40 +519,15 @@ searchResults.addEventListener('change', function () {
 // Handle book selection change
 bookSelect.addEventListener('change', function () {
     const selectedBook = bookSelect.value;
-    currentBook = `img${selectedBook}`; // Update image folder
+    currentBook = selectedBook;
 
-    // Reset input and image
+    // Reset input and placeholder, but don't reset search
     imageInput.value = '';
-    searchInput.value = '';
-    searchResults.innerHTML = '<option value="">اختر ترنيمة...</option>';
-    imgElement.style.display = 'none';
-    errorMessage.style.display = 'none';
-
-    // Update max values and placeholder
     imageInput.placeholder = `1-${maxValues[selectedBook]}`;
-    imageInput.max = maxValues[selectedBook];
-
-    // Update categories dropdown
-    updateCategories(selectedBook);
-});
-
-// Update categories dropdown based on book selection
-function updateCategories(book) {
-    categorySelect.innerHTML = ''; // Clear existing categories
-    categories[book].forEach(category => {
-        const option = document.createElement('option');
-        option.value = category.value;
-        option.textContent = category.text;
-        categorySelect.appendChild(option);
-    });
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function () {
-    bookSelect.value = '1';
-    updateCategories('1');
-    imageInput.placeholder = `1-${maxValues['1']}`;
-    imageInput.max = maxValues['1'];
-    errorMessage.style.display = 'none';
     imgElement.style.display = 'none';
+
+     // Clear the search field and results when the book changes
+     searchInput.value = ''; // Clear the search input
+     searchResults.innerHTML = '<option value="">اختر ترنيمة...</option>'; // Clear search results
 });
+
