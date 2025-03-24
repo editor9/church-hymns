@@ -538,6 +538,7 @@ searchInput.addEventListener('input', function () {
 searchResults.addEventListener('change', function () {
     if (searchResults.value) {
         imageInput.value = searchResults.value;
+        searchInput.value = ''; // Clear the search input field
         updateImage();
     }
 });
