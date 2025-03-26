@@ -186,6 +186,15 @@ footer {
 	justify-content: space-evenly;
 }
 
+footer a {
+    color: white; /* Ensure links are white */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
 
 @media all and (max-width: 1250px) {
 	#contact > article {
